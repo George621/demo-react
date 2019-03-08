@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 
 
 module.exports = {
@@ -22,6 +24,13 @@ module.exports = {
   },
   devServer: {
     port: 3000,
-    contentBase: './dist'
-  }
+    contentBase: './dist',
+    overlay: true,
+
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Webpack demo",
+    }),
+  ],
 }
