@@ -30,7 +30,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack demo",
+      minify:{
+          removeAttributeQuotes:true  //removeAttrubuteQuotes是却掉属性的双引号。
+      },
+      hash:true,
+      template:'./src/index.html' //模板文件
     }),
   ],
 }
