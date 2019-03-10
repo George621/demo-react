@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Greeting from './components/Greeting.jsx';
+import { BrowserRouter, Route } from 'react-router-dom';
+import PrimaryLayout from './routers/PrimaryLayout.jsx'
 
 function LogInButton(props){
 	return <button onClick={props.onClick}>
-		Login
+		Login, https://malun666.github.io/aicoder_vip_doc/#/
 	</button>
 }
 
@@ -47,6 +49,9 @@ class LoginControl extends Component{
 		return <div>
 			<Greeting isLogedIn={isLogedIn} />	
 			{button}
+			<BrowserRouter>
+				<PrimaryLayout />
+			</BrowserRouter>
 		</div>
 	}  
 }
