@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Greeting from './components/Greeting.jsx';
 import { BrowserRouter, Route } from 'react-router-dom';
 import PrimaryLayout from './routers/PrimaryLayout.jsx'
+import BasicExample from './routers/BasicExample.jsx';
 
 function LogInButton(props){
 	return <button onClick={props.onClick}>
@@ -48,7 +49,8 @@ class LoginControl extends Component{
 		}
 		return <div>
 			<Greeting isLogedIn={isLogedIn} />	
-			{button}
+      {button}
+        <BasicExample></BasicExample>
 			<BrowserRouter>
 				<PrimaryLayout />
 			</BrowserRouter>
